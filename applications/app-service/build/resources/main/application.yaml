@@ -1,0 +1,52 @@
+server:
+  host: "localhost"
+  port: 8088
+  compression:
+    enabled: true
+    mime-types: "application/json"
+    min-response-size: 2048
+spring:
+  application:
+    name: "liquidacion"
+  datasource:
+    host: "localhost"
+    port: "5432"
+    database: "postgres"
+    schema: "esquema_liquidacion"
+    username: "postgres"
+    password: "12345"
+    driver-class-name: "org.postgresql.Driver"
+  liquibase:
+    enabled: true
+    change-log: "classpath:db/db.changelog-master.yaml"
+
+adapters:
+  r2dbc:
+    host: "localhost"
+    port: "5432"
+    database: "postgres"
+    username: "postgres"
+    password: "12345"
+    schema: "esquema_liquidacion"
+    other-schemas:
+      payments: "esquema_pagos"
+    chunks: 100
+  webclients:
+    payments:
+      url: "https://t067ksf872.execute-api.us-east-1.amazonaws.com"
+    parameters:
+      uri: "qa/api/v1/parametros/liquidacion"
+      connection-time-out: 10000
+      read-timeout: 10000
+      write-timeout: 5000
+    host: "https://t067ksf872.execute-api.us-east-1.amazonaws.com"
+
+entrypoint:
+  sqs:
+    region: "us-east-1"
+    endpoint: "http://localhost:4566"
+    queue-url: "http://sqs.us-east-1.localhost.localstack.cloud:4566/000000000000/my-queue"
+    wait-time-seconds: 20
+    visibility-timeout-seconds: 30
+    max-number-of-messages: 10
+    number-of-threads: 1

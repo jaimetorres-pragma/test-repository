@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: &namespace&
+  name: &microservice_name&
+  labels:
+    app: &microservice_name&
+spec:
+  selector:
+    matchLabels:
+      app: &microservice_name&
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: &microservice_name&
+    spec:
+      serviceAccountName: &serviceAccountName& # esta cuenta de servicio se debe crear para cada namespace con 3htp
+      containers:
+        - name: &microservice_name&
+          image: &imagen_ecr_liquidacion&:&version_image&
+          env:
+            &OTEL_VARIABLES&          
+            - name: TZ
+              value: America/Bogota
+            - name: LANG
+              value: C.UTF-8
+          ports:
+            - containerPort: &containerPort&
+              protocol: TCP
+          resources:
+            limits:
+              cpu: &resources_limits_cpu&
+              memory: &resources_limits_memory&
+            requests:
+              cpu: &resources_requests_cpu&
+              memory: &resources_requests_memory&
+          securityContext:
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            privileged: false
+            capabilities:
+              add:
+                - CHOWN
+                - FOWNER
+              drop:
+                - ALL
+            runAsUser: 1000
+            runAsGroup: 3000
+            runAsNonRoot: true
+          volumeMounts:
+            - name: conf-volumen
+              mountPath: /app/config/application.yml
+              subPath: application.yml
+          readinessProbe:
+            failureThreshold: &readinessProbe_failureThreshold&
+            initialDelaySeconds: &readinessProbe_initialDelaySeconds&
+            periodSeconds: &readinessProbe_periodSeconds&
+            successThreshold: 1
+            tcpSocket:
+              port: 8080
+            timeoutSeconds: 1
+          livenessProbe:
+            failureThreshold: &livenessProbe_failureThreshold&
+            initialDelaySeconds: &livenessProbe_initialDelaySeconds&
+            periodSeconds: &livenessProbe_periodSeconds&
+            successThreshold: 1
+            tcpSocket:
+              port: 8080
+            timeoutSeconds: 1
+      dnsPolicy: &dnsPolicy&
+      volumes:
+        - name: conf-volumen
+          secret:
+            secretName: &microservice_name&-secret
