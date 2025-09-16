@@ -1,0 +1,120 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-tliq-deduccion
+      author: edwin.marrugo
+      comment: "Crear tabla TLIQ_DEDUCCION - Deducciones aplicables a los pagos (retenciones, embargos, etc.)"
+      changes:
+        - createTable:
+            tableName: TLIQ_DEDUCCION
+            columns:
+              - column:
+                  name: LIQ_ID_DEDUCCION_PK
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: LIQ_ID_PARTICIPANTE_FK
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_ID_REFERENCIA_EXTERNO_DEDUCCION
+                  type: VARCHAR(50)
+              - column:
+                  name: LIQ_SN_ES_ADICIONAL
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_DS_TIPO
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+                  remarks: "Tipos: [EPS, AFP]"
+              - column:
+                  name: LIQ_DS_NOMBRE
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_DS_TIPO_DEDUCCION
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+                  remarks: "Tipos: [PORCENTAJE, VALOR]"
+              - column:
+                  name: LIQ_NM_PORCENTAJE
+                  type: NUMERIC
+              - column:
+                  name: LIQ_NM_VALOR
+                  type: BIGINT
+              - column:
+                  name: LIQ_NM_VALOR_ORIGEN
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_DS_MONEDA
+                  type: VARCHAR(10)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_TASA_CAMBIO
+                  type: NUMERIC
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_VALOR_LOCAL
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_DS_PERIODICIDAD
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_DS_FRECUENCIA
+                  type: VARCHAR(50)
+              - column:
+                  name: LIQ_NM_CANTIDAD_PAGOS
+                  type: INTEGER
+              - column:
+                  name: LIQ_NM_NUMERO_PAGO
+                  type: INTEGER
+              - column:
+                  name: LIQ_DS_ESTADO_DEDUCCION
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_FE_INICIO
+                  type: DATE
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_FE_FIN
+                  type: DATE
+              - column:
+                  name: LIQ_ID_TERCERO_FK
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: TLIQ_DEDUCCION
+            baseColumnNames: LIQ_ID_PARTICIPANTE_FK
+            referencedTableName: TLIQ_PARTICIPANTE
+            referencedColumnNames: LIQ_ID_PARTICIPANTE_PK
+            constraintName: FK_TLIQ_DEDUCCION_PARTICIPANTE
+        - addForeignKeyConstraint:
+            baseTableName: TLIQ_DEDUCCION
+            baseColumnNames: LIQ_ID_TERCERO_FK
+            referencedTableName: TLIQ_TERCERO
+            referencedColumnNames: LIQ_TERCERO_PK
+            constraintName: FK_TLIQ_DEDUCCION_TERCERO
+        - addUniqueConstraint:
+            tableName: TLIQ_DEDUCCION
+            columnNames: LIQ_ID_PARTICIPANTE_FK, LIQ_DS_TIPO, LIQ_DS_NOMBRE, LIQ_SN_ES_ADICIONAL
+            constraintName: UQ_TLIQ_DEDUCCION_PARTICIPANTE_TIPO_ADICIONAL
+

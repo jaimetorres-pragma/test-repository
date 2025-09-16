@@ -1,0 +1,121 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-tliq-lote-liquidacion-v2
+      author: edwin.marrugo
+      comment: "Create TLIQ_LOTE_LIQUIDACION table v2 - Lotes de liquidación para procesamiento de pagos"
+      changes:
+        - createTable:
+            tableName: TLIQ_LOTE_LIQUIDACION
+            columns:
+              - column:
+                  name: LIQ_ID_LOTE_LIQUIDACION_PK
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: LIQ_FE_LIQUIDACION
+                  type: DATE
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_FE_DISPERSION
+                  type: DATE
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_DS_PERIODO_LIQUIDACION
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_DS_ESTADO
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+                  remarks: "Estados: [NUEVO, APROBADO, LIQUIDADO]"
+              - column:
+                  name: LIQ_NM_CANTIDAD_PARTICIPANTES
+                  type: INTEGER
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_CANTIDAD_TERCEROS
+                  type: INTEGER
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_CANTIDAD_PAGOS
+                  type: BIGINT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_VALOR_BRUTO_TOTAL_LOCAL
+                  type: BIGINT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_VALOR_DEDUCCIONES_TOTAL_LOCAL
+                  type: BIGINT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_VALOR_NETO_TOTAL_LOCAL
+                  type: BIGINT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_VALOR_BRUTO_TOTAL_TERCEROS_LOCAL
+                  type: BIGINT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_VALOR_DEDUCCIONES_TOTAL_TERCEROS_LOCAL
+                  type: BIGINT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_VALOR_NETO_TOTAL_TERCEROS_LOCAL
+                  type: BIGINT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_VALOR_BRUTO_PARTICIPANTES_LOCAL
+                  type: BIGINT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_VALOR_DEDUCCIONES_PARTICIPANTES_LOCAL
+                  type: BIGINT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_VALOR_NETO_PARTICIPANTES_LOCAL
+                  type: BIGINT
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_DS_RAZON_LOTE
+                  type: VARCHAR(255)
+              - column:
+                  name: LIQ_FE_CREACION_LOTE
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_FE_ACTUALIZACION_LOTE
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false

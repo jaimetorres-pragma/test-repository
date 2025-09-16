@@ -1,0 +1,81 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-tliq-tercero
+      author: edwin.marrugo
+      comment: "Crear tabla TLIQ_TERCERO - Información de terceros para liquidación"
+      changes:
+        - createTable:
+            tableName: TLIQ_TERCERO
+            columns:
+              - column:
+                  name: LIQ_TERCERO_PK
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: LIQ_ID_PERSONA_FK
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_ID_LOTE_LIQUIDACION_FK
+                  type: BIGINT
+              - column:
+                  name: LIQ_DS_TIPO_PAGO
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+                  remarks: "Tipos: [SEGURIDAD SOCIAL, LIBRANZA]"
+              - column:
+                  name: LIQ_DS_ESTADO_TERCERO
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+                  remarks: "Estados: [ACTIVO, RETENIDO]"
+              - column:
+                  name: LIQ_DS_ESTADO_LIQUIDACION
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+                  remarks: "Estados: [APROBADO, LIQUIDADO]"
+              - column:
+                  name: LIQ_NM_VALOR_BRUTO_LOCAL
+                  type: BIGINT
+              - column:
+                  name: LIQ_NM_VALOR_DEDUCCIONES_LOCAL
+                  type: BIGINT
+              - column:
+                  name: LIQ_NM_VALOR_NETO_LOCAL
+                  type: BIGINT
+              - column:
+                  name: LIQ_ID_TERCERO_MAESTRO_FK
+                  type: BIGINT
+              - column:
+                  name: LIQ_DS_PERIODICIDAD
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: TLIQ_TERCERO
+            baseColumnNames: LIQ_ID_PERSONA_FK
+            referencedTableName: TLIQ_PERSONA
+            referencedColumnNames: LIQ_ID_PERSONA_PK
+            constraintName: FK_TLIQ_TERCERO_PERSONA
+        - addForeignKeyConstraint:
+            baseTableName: TLIQ_TERCERO
+            baseColumnNames: LIQ_ID_LOTE_LIQUIDACION_FK
+            referencedTableName: TLIQ_LOTE_LIQUIDACION
+            referencedColumnNames: LIQ_ID_LOTE_LIQUIDACION_PK
+            constraintName: FK_TLIQ_TERCERO_LOTE_LIQUIDACION
+        - addForeignKeyConstraint:
+            baseTableName: TLIQ_TERCERO
+            baseColumnNames: LIQ_ID_TERCERO_MAESTRO_FK
+            referencedTableName: TLIQ_TERCERO
+            referencedColumnNames: LIQ_TERCERO_PK
+            constraintName: FK_TLIQ_TERCERO_MAESTRO
+        - addUniqueConstraint:
+            tableName: TLIQ_TERCERO
+            columnNames: LIQ_ID_PERSONA_FK, LIQ_ID_LOTE_LIQUIDACION_FK
+            constraintName: UQ_TLIQ_TERCERO_LOTE
+

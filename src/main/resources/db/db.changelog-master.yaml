@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - include:
+        file: db/changelog/create-tliq-persona.yaml
+  - include:
+        file: db/changelog/create-tliq-lote-liquidacion.yaml
+  - include:
+        file: db/changelog/create-tliq-participante.yaml
+  - include:
+        file: db/changelog/create-tliq-tercero.yaml
+  - include:
+        file: db/changelog/create-tliq-deduccion.yaml
+  - include:
+        file: db/changelog/create-tliq-ingreso.yaml
+  - include:
+        file: db/changelog/insert-tliq-persona.yaml

@@ -1,0 +1,83 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-tliq-participante-v2
+      author: edwin.marrugo
+      comment: "Create TLIQ_PARTICIPANTE table v2 - Participantes en los lotes de liquidación"
+      changes:
+        - createTable:
+            tableName: TLIQ_PARTICIPANTE
+            columns:
+              - column:
+                  name: LIQ_ID_PARTICIPANTE_PK
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: LIQ_ID_PARTICIPANTE_PAGO
+                  type: UUID
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_ID_SOLICITUD_PAGO
+                  type: UUID
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_DS_PRODUCTO
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_ID_PERSONA_FK
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_ID_LOTE_LIQUIDACION_FK
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_DS_ESTADO_PARTICIPANTE
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_DS_ESTADO_LIQUIDACION
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+                  remarks: "Estados: [NUEVO, APROBADO, LIQUIDADO]"
+              - column:
+                  name: LIQ_NM_VALOR_BRUTO_LOCAL
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_VALOR_DEDUCCIONES_LOCAL
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_VALOR_NETO_LOCAL
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: TLIQ_PARTICIPANTE
+            baseColumnNames: LIQ_ID_PERSONA_FK
+            referencedTableName: TLIQ_PERSONA
+            referencedColumnNames: LIQ_ID_PERSONA_PK
+            constraintName: FK_TLIQ_PARTICIPANTE_PERSONA
+        - addForeignKeyConstraint:
+            baseTableName: TLIQ_PARTICIPANTE
+            baseColumnNames: LIQ_ID_LOTE_LIQUIDACION_FK
+            referencedTableName: TLIQ_LOTE_LIQUIDACION
+            referencedColumnNames: LIQ_ID_LOTE_LIQUIDACION_PK
+            constraintName: FK_TLIQ_PARTICIPANTE_LOTE_LIQUIDACION
+        - addUniqueConstraint:
+            tableName: TLIQ_PARTICIPANTE
+            columnNames: LIQ_ID_PARTICIPANTE_PAGO, LIQ_ID_LOTE_LIQUIDACION_FK
+            constraintName: UQ_TLIQ_PARTICIPANTE_PAGO_LOTE
+

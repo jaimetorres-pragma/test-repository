@@ -1,0 +1,468 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-tpag-persona
+      author: acardenas
+      comment: "Insert bancos principales en TLIQ_PERSONA"
+      changes:
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890100180" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "SCOTIABANK COLPATRIA S.A" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890100180" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT800037800" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO AGRARIO" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "800037800" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860035827" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO AV VILLAS" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860035827" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860007335" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO CAJA SOCIAL BCSC SA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860007335" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890203088" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO COOPERATIVO COOPCENTRAL" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890203088" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT900200960" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO CREDIFINANCIERA S.A" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "900200960" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860034313" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO DAVIVIENDA SA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860034313" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860034313-DAVIPLATA" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "DAVIPLATA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860034313" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860034313-RAPPIPAY" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "RAPPIPAY" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860034313" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860002964" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO DE BOGOTÁ" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860002964" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT900215071" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO DE LAS MICROFINANZAS - BANCAMIA S.A." }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "900215071" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890300279" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO DE OCCIDENTE" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890300279" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT900047981" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO FALABELLA S.A" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "900047981" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860051894" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO FINANDINA S.A" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860051894" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860050750" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO GNB SUDAMERIS" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860050750" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT900114346" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO J.P. MORGAN COLOMBIA S.A." }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "900114346" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT900768933" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO MUNDO MUJER" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "900768933" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890200756" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO PICHINCHA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890200756" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT8600077838" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO POPULAR" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "8600077838" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT900628110" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO SANTANDER DE NEGOCIOS COLOMBIA S.A." }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "900628110" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860043186" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO SERFINANZA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860043186" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT900378212" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCO W S.A" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "900378212" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT800149923" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCÓLDEX S.A." }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "800149923" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890903938" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCOLMBIA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890903938" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890903938-NEQUI" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "NEQUI" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890903938" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT900406150" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BANCOOMEVA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "900406150" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860003020" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "BBVA COLOMBIA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860003020" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860051135" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CITIBANK" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860051135" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890901177" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "COFINEP COOPERATIVA FINANCIERA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890901177" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890927034" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "COLTEFINANCIERA S.A" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890927034" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890981395" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CONFIAR COOPERATIVA FINANCIERA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890981395" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT811022688" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "COOPERATIVA FINANCIERA DE ANTIOQUIA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "811022688" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890901176" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "COOTRAFA COOPERATIVA FINANCIERA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890901176" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT900688066" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "FINANCIARA JURISCOOP S.A. COMPAÑÍA DE FINANCIAMIENTO" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "900688066" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860006797" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "GIROS Y FINANZAS CF" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860006797" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT811007729" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "IRIS" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "811007729" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890903937" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "ITAÚ" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890903937" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890903937-HELM" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "ITAÚ* (HELM BANK)" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890903937" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT901383474" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "LULO BANK S.A." }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "901383474" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860025971" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "MIBANCO S.A." }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860025971" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT901077952" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "MOVII" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "901077952" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT800229739" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "PROTECCIÓN" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "800229739" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT800224808" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "PORVENIR" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "800224808" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT800253055" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "OLD MUTUAL (ANTES SKANDIA)" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "800253055" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT830125132" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "OLD MUTUAL ALTERNA (ANTES SKANDIA)" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "830125132" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT800227940" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "COLFONDOS" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "800227940" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT900336004" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "COLPENSIONES" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "900336004" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890900840" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR CAMACOL  COMFAMILIAR CAMACOL" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890900840" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890900842" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR COMFENALCO ANTIOQUIA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890900842" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890900841" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR DE ANTIOQUIA COMFAMA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890900841" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890102044" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR CAJACOPI ATLANTICO" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890102044" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890102002" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR DE BARRANQUILLA COMBARRANQUILLA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890102002" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890101994" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR COMFAMILIAR DEL ATLANTICO" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890101994" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890480023" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR DE FENALCO  - ANDI COMFENALCO CARTAGENA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890480023" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890480110" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR DE CARTAGENA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890480110" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT891800213" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR DE BOYACA - COMFABOY" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "891800213" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT890806490" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR DE CALDAS" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "890806490" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT891190047" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR DEL CAQUETÁ - COMFACA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "891190047" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT891500182" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR DEL CAUCA - COMFACAUCA" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "891500182" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT892399989" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "COMFACESAR" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "892399989" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT891080005" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR DE CORDOBA COMFACOR" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "891080005" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860013570" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR CAFAM" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860013570" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860007336" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860007336" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860066942" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR COMPENSAR" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860066942" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT860045904" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA - COMFACUNDI" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "860045904" }
+        - insert:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column: { name: LIQ_CD_CODIGO, value: "NIT891600091" }
+              - column: { name: LIQ_DS_NOMBRE_RAZON_SOCIAL, value: "CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ" }
+              - column: { name: LIQ_DS_TIPO_DOCUMENTO, value: "NIT" }
+              - column: { name: LIQ_NM_NUMERO_DOCUMENTO, value: "891600091" }

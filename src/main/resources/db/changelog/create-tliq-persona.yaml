@@ -1,0 +1,74 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-tliq-persona
+      author: acardenas
+      comment: "Create TLIQ_PERSONA table v2 - Información de personas físicas y jurídicas del sistema"
+      changes:
+        - createTable:
+            tableName: TLIQ_PERSONA
+            columns:
+              - column:
+                  name: LIQ_ID_PERSONA_PK
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: LIQ_CD_CODIGO
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_DS_NOMBRE_RAZON_SOCIAL
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_DS_SEGUNDO_NOMBRE
+                  type: VARCHAR(100)
+              - column:
+                  name: LIQ_DS_PRIMER_APELLIDO
+                  type: VARCHAR(100)
+              - column:
+                  name: LIQ_DS_SEGUNDO_APELLIDO
+                  type: VARCHAR(100)
+              - column:
+                  name: LIQ_DS_TIPO_DOCUMENTO
+                  type: VARCHAR(5)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_NM_NUMERO_DOCUMENTO
+                  type: VARCHAR(15)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: LIQ_FE_NACIMIENTO
+                  type: DATE
+              - column:
+                  name: LIQ_SN_RESIDENTE_EXTERIOR
+                  type: BOOLEAN
+              - column:
+                  name: LIQ_DS_CONDICION
+                  type: VARCHAR(50)
+              - column:
+                  name: LIQ_SN_ES_ACTIVO
+                  type: BOOLEAN
+                  defaultValueBoolean: true
+                  constraints:
+                    nullable: false
+        - sql:
+            splitStatements: false
+            stripComments: true
+            sql: >
+              ALTER TABLE TLIQ_PERSONA
+              ADD CONSTRAINT CHK_TLIQ_PERSONA_UPPERCASE
+              CHECK (
+                LIQ_CD_CODIGO = UPPER(LIQ_CD_CODIGO) AND
+                LIQ_DS_NOMBRE_RAZON_SOCIAL = UPPER(LIQ_DS_NOMBRE_RAZON_SOCIAL) AND
+                (LIQ_DS_SEGUNDO_NOMBRE IS NULL OR LIQ_DS_SEGUNDO_NOMBRE = UPPER(LIQ_DS_SEGUNDO_NOMBRE)) AND
+                (LIQ_DS_PRIMER_APELLIDO IS NULL OR LIQ_DS_PRIMER_APELLIDO = UPPER(LIQ_DS_PRIMER_APELLIDO)) AND
+                (LIQ_DS_SEGUNDO_APELLIDO IS NULL OR LIQ_DS_SEGUNDO_APELLIDO = UPPER(LIQ_DS_SEGUNDO_APELLIDO)) AND
+                LIQ_DS_TIPO_DOCUMENTO = UPPER(LIQ_DS_TIPO_DOCUMENTO) AND
+                LIQ_NM_NUMERO_DOCUMENTO = UPPER(LIQ_NM_NUMERO_DOCUMENTO)
+              );
